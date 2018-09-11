@@ -23,6 +23,13 @@ pipeline {
         }
    }
 
+    stage('Test') {
+      steps {
+        echo '### Test ###'
+	sh "coverage run --source testing -m unittest discover && coverage report"
+      }
+    }
+
    stage('SonarQube analysis') {
        steps {
            script {
@@ -51,11 +58,5 @@ pipeline {
            }
        }
    }
-
-    stage('Test') {
-      steps {
-        echo '### Test ###'
-      }
-    }
   }
 }
