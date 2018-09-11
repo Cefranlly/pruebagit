@@ -29,7 +29,7 @@ pipeline {
    stage('SonarQube analysis') {
        steps {
            script {
-               env.scannerHome = tool'SonarQube Scanner 2.8'
+               env.scannerHome = tool'SonarQubeScanner'
                withSonarQubeEnv('SonarQubeScanner') {
                    sh "${env.scannerHome}/bin/sonar-scanner " + "-Dproject.settings=.sonarqube.properties"
                }
