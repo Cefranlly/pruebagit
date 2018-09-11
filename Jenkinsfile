@@ -1,11 +1,5 @@
 pipeline {
 
-  agent {
-       node {
-           label 'mavenslaves'
-       }
-   }
-
    options { disableConcurrentBuilds() }
 
 
