@@ -22,7 +22,7 @@ pipeline {
     stage('Test') {
       steps {
         echo '### Test ###'
-	sh "coverage run --source testing -m unittest discover && coverage report"
+	sh "coverage run --source testing -m unittest discover && coverage report && coverage xml -i"
       }
     }
 
