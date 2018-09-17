@@ -1,0 +1,8 @@
+[run]
+source = .
+
+[report]
+fail_under = 40
+
+[xml]
+output = coverage.xml
