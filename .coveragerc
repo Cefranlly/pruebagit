@@ -9,4 +9,4 @@ show_missing = True
 fail_under = 40
 
 [xml]
-output = ./coverage.xml
+output = coverage.xml
