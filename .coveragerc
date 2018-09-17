@@ -1,8 +1,12 @@
 [run]
-source = .
+omit = 
+    */migrations/*
+    */management/*
 
 [report]
+ignore_errors = True
+show_missing = True
 fail_under = 40
 
 [xml]
-output = coverage.xml
+output = ./coverage.xml
